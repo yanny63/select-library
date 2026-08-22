@@ -1,0 +1,39 @@
+{
+  "name": "@yanny63/select",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A lightweight select library for Vanilla JavaScript and TypeScript.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "scripts": {
+    "dev": "vite examples",
+    "build": "tsup && tsc --emitDeclarationOnly --outDir dist && cp src/styles.css dist/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanny63/select-library.git"
+  },
+  "keywords": [],
+  "author": "yanny63",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanny63/select-library/issues"
+  },
+  "homepage": "https://github.com/yanny63/select-library#readme",
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
