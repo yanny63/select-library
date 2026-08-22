@@ -1,6 +1,6 @@
 {
   "name": "@yanny63/select",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A lightweight select library for Vanilla JavaScript and TypeScript.",
   "main": "./dist/index.js",

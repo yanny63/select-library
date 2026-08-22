@@ -5,12 +5,14 @@ interface SelectArguments {
     select: HTMLSelectElement
     placeholder?: string
     multiple?: boolean
+    darkMode?: boolean
 }
 
 export class Select {
     private select: HTMLSelectElement
     private placeholder: string
     private multiple: boolean
+    private darkMode: boolean
     private container: HTMLDivElement
     private inputContainer: HTMLLabelElement
     private optionsContainer: HTMLDivElement
@@ -23,9 +25,14 @@ export class Select {
         this.select = args.select
         this.placeholder = args?.placeholder ?? ""
         this.multiple = args?.multiple ?? false
+        this.darkMode = args?.darkMode ?? false
 
         this.container = document.createElement("div")
         this.container.classList.add("select-main")
+
+        if (this.darkMode) {
+            this.container.classList.add("dark-mode")
+        }
 
         this.select.insertAdjacentElement("afterend", this.container)
         this.select.style.display = "none"
