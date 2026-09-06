@@ -96,6 +96,9 @@ export class Select {
         
         newOptions.forEach((option) => {
             this.optionsContainer.append(option)
+            option.addEventListener("click", () => {
+                option.dispatchEvent(new CustomEvent("valuechanged"))
+            })
         })
 
         return newOptions
